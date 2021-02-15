@@ -9,13 +9,19 @@ class Documento{
     }
 
     public function setNumero($numero){
+        $resultado = Documento::validarCpf($numero);
+
+        if ($resultado === false){
+
+            throw new Exception("CPF informado não é válido", 1);
+        }
         $this->numero = $numero;
     }
 
     public static function validarCpf($cpf):bool{
    
         if(empty($cpf)) {
-           
+            return false;
         }
      
         $cpf = preg_match('/[0-9]/', $cpf)?$cpf:0;
@@ -60,7 +66,7 @@ class Documento{
 }
 
 $cpf = new Documento();
-$cpf->setNumero("111111111111");
+$cpf->setNumero("01145957129");
 
 var_dump($cpf->getNumero());
 ?>
