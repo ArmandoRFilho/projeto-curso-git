@@ -10,13 +10,13 @@ class Pessoa{
 
         echo $this->nome . "<br/>";
         echo $this->idade . "<br/>";
-        echo $this->senha . "<br/>";
+        echo $this->senha;
     }
 }
 
 $objeto = new Pessoa();
 
-//echo $objeto->senha . "<br/>";
+
 $objeto->verDados();
 
 ?>

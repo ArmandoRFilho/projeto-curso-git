@@ -10,7 +10,7 @@ class Pessoa{
 
         echo $this->nome . "<br/>";
         echo $this->idade . "<br/>";
-        echo $this->senha . "<br/>";
+        echo $this->senha;
     }
 }
 class Programador extends Pessoa {
@@ -19,7 +19,6 @@ class Programador extends Pessoa {
 }
 $objeto = new Programador();
 
-//echo $objeto->senha . "<br/>";
 $objeto->verDados();
 
 ?>
