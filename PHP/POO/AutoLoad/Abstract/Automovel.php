@@ -22,7 +22,6 @@ abstract class Automovel implements Veiculo {
         echo "O veiculo engatou a " . $marcha;
     }
 }
-
 class DelRey extends Automovel {
 
     public function empurrar(){
@@ -33,4 +32,6 @@ class DelRey extends Automovel {
 $carro =  new DelRey();
 
 $carro->acelerar(200);
+?>
+
 ?>

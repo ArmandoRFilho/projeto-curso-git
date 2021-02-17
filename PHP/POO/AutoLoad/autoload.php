@@ -1,8 +1,8 @@
 <?php
 
-function __autoload($nomeClasse){
+function spl_autoload_register($nomeClasse){
     var_dump($nomeClasse);
-    require_once("$nomeClasse.php");
+    require_once("Abstratas".$nomeClasse."php");
 
 }
 
