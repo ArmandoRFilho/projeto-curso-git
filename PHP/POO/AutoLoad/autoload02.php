@@ -14,9 +14,9 @@ spl_autoload_register("incluirClasses");
 
 spl_autoload_register(function($nomeClasse){
     
-    if (file_exists("Abstraras". DIRECTORY_SEPARATOR .$nomeClasse.".php") === true){
+    if (file_exists("Abstract". DIRECTORY_SEPARATOR .$nomeClasse.".php") === true){
 
-        require_once("Abstartas". DIRECTORY_SEPARATOR .$nomeClasse.".php");
+        require_once("Abstarct". DIRECTORY_SEPARATOR .$nomeClasse.".php");
         }
 });
 
