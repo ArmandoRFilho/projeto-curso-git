@@ -7,8 +7,12 @@ if ($con->connect_error){
 
 $result = $con->query("SELECT * FROM tb_usuario ORDER BY deslogin");
 
-while ($row = $result->fetch_array()) {
+$data = array();
+
+while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
     # code...
-    var_dump($row);
+    array_push($data, $row);
+
 }
-?>
+
+echo json_encode($data);
