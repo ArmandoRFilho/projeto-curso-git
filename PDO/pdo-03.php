@@ -2,15 +2,12 @@
 
 $conn = new PDO("mysql:host=localhost;dbname=dbphp7", "root", "");
 
-$stmt = $conn->prepare("UPDATE tb_usuarios SET deslogin = :LOGIN, dessenha = :PASSWORD WHERE idusuario = ID");
+$stmt = $conn->prepare("DELETE FROM tb_usuarios WHERE idusuario = ID");
 
-$login = "Joao";
-$password = "12345";
-$id = 2;
+$id = 4;
 
-$stmt->bindParam(":LOGIN", $login);
-$stmt->bindParam(":PASSWORD", $password);
 $stmt->bindParam(":ID", $id);
+
 $stmt->execute();
 
-echo "Inserido ok!";
+echo "DELTADO OK!";
