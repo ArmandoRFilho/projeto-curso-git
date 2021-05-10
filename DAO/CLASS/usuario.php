@@ -44,7 +44,7 @@ class Usuario
     {
         $sql = new Sql();
 
-        $results = $sql->select("SELECT * FROM tb_usuarios WHERE idusuario = :ID", array(
+        $results = $sql -> select("SELECT * FROM tb_usuarios WHERE idusuario = :ID", array(
             ":ID" => $id
         ));
         if (count($results) > 0) {
@@ -55,6 +55,13 @@ class Usuario
             $this->setDessenha($row['dessenha']);
             $this->setDtcadastro(new DateTime($row['dtcadastro']));
         }
+    }
+
+    public static function getList(){
+
+        $sql = new Sql();
+
+        return $sql->select("SELECT * FROM tb_usuarios ORDER BY deslogin;");
     }
 
     public function __toString()
