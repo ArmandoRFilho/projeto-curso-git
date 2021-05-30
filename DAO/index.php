@@ -10,14 +10,14 @@ echo $root;*/
 //echo json_encode($lista);
 
 //Carrega uma lista de usuários buscanso pelo login
-//$search = Usuario::search("us");
-//echo json_encode($search);
+$search = Usuario::search("ro");
+echo json_encode($search);
 
 //Carrega um usuário usando o login e a senha 
-$usuario = new Usuario();
-$usuario->login("root", "!@#$");
+//$usuario = new Usuario();
+//$usuario->login("root", "!@#$");
 
-echo $usuário;
+//echo $usuário;
 /**$sql = new Sql();
 
 $usuarios = $sql->select("SELECT * FROM tb_usuarios");
