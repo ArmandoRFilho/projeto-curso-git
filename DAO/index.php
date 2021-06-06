@@ -37,12 +37,16 @@ $aluno = new Usuario("aluno", "@lun0");
 $aluno->insert();
 
 echo $aluno;*/
-
+/*
+//Alterar um usuário
 $usuario =  new Usuario();
-
 $usuario->loadById(2);
-
 $usuario->update("Professor", "842540");
+echo $usuario;*/
+
+$usuario = new Usuario();
+$usuario->loadById(1);
+$usuario->delete();
 
 echo $usuario;
 
