@@ -6,8 +6,8 @@ $sql = new Sql();
 
 $usuarios = $sql->select("SELECT * FROM tb_usuarios ORDER BY deslogin");
 
-print_r($usuarios);
-/*
+//print_r($usuarios);
+
 $headers = array();
 
 foreach ($usuarios[0] as $key => $value) {
@@ -32,5 +32,5 @@ foreach ($usuarios as $row) {
 }//End foreach de linha 
 
 fclose($file);
-*/
+
 ?>
