@@ -16,4 +16,12 @@ if (!file_exists($dir1 .DIRECTORY_SEPARATOR. $filename)){
 
     fclose($file);
 }
+
+rename(
+    $dir2 .DIRECTORY_SEPARATOR. $filename, //Origem 
+    $dir1 .DIRECTORY_SEPARATOR. $filename  //Destino
+);
+
+echo "Arquivo movido com sucesso!";
+
 ?>
